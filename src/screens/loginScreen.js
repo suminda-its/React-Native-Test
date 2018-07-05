@@ -1,5 +1,5 @@
 import React , { Component } from "react";
-import { View, StyleSheet , Image, TextInput , Button, Text , TouchableOpacity} from "react-native";
+import { View, ScrollView, StyleSheet , Image, TextInput , Button, Text , TouchableOpacity} from "react-native";
 import { WINDOW_HEIGHT, textbox_background } from "../shared";
 
 /**
@@ -14,7 +14,7 @@ export default class logInScreen extends Component{
     render(){
         return(
 
-            <View style={styles.page}>
+            <ScrollView style={styles.page}>
 
                 <View style={styles.logoContainer}>
                     <Image resizeMode="contain" style={styles.logo} source={require('../../assets/imgs/santos-logo.png')} />
@@ -38,7 +38,7 @@ export default class logInScreen extends Component{
 
                 </View>
 
-            </View>
+            </ScrollView>
         )
     }
 
@@ -66,19 +66,22 @@ const styles = StyleSheet.create({
       width: WINDOW_HEIGHT * 0.35,
       height: WINDOW_HEIGHT * 0.35
     },
+
     textContainer:{
         flex: 0,
-
         alignItems: "center",
         // backgroundColor: "white",
         marginVertical: 50,
     },
+    
     textBox:{
         height: 40, 
         width: 150, 
         borderColor: 'gray', 
-        borderWidth: 2,
+        borderWidth: 1,
         backgroundColor: textbox_background,
+        borderRadius : 5,
+        padding : 10
         
     },
     
@@ -91,7 +94,6 @@ const styles = StyleSheet.create({
     loginBtn:{
         width: 150,
         height: 40,
-
         flex: 0,
         justifyContent: 'center',
         alignItems: 'center',
@@ -99,7 +101,6 @@ const styles = StyleSheet.create({
         // padding: VERTICAL_MARGIN * 1.3,
         borderRadius: 3,
         // margin: HORIZONTAL_MARGIN,
-     
     },
     loginButtonFont:{
         color: "blue"
