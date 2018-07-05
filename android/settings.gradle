@@ -1,0 +1,3 @@
+rootProject.name = 'santosReact'
+
+include ':app'
